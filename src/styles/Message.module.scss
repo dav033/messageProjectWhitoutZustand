@@ -1,0 +1,134 @@
+@import "./variables.scss";
+
+.mensaje {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  justify-content: flex-start;
+  min-height: 50px;
+}
+
+#left .avatar {
+  display: none;
+}
+
+.date {
+  font-size: 1rem;
+  color: white;
+
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#left {
+  justify-content: flex-end;
+}
+
+.mensaje img {
+  margin-bottom: 0.5rem;
+}
+
+.mensaje .cuerpo {
+  font-size: 0.85em;
+  padding: 10px;
+  background-color: $blueGray;
+  border-radius: 8px;
+  position: relative;
+  min-width: 100px;
+  max-width: 1000px;
+}
+
+#left .cuerpo {
+  background-color: $blue;
+}
+
+.mensaje .cuerpo::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-width: 9px;
+  border-color: transparent $blueGray transparent transparent;
+  border-style: solid;
+  left: -18px;
+  top: 7px;
+}
+
+#left .cuerpo::before {
+  border-color: transparent transparent transparent $blue;
+  left: initial;
+  right: -18px;
+}
+
+.mensaje .texto {
+  position: relative;
+  color: aliceblue;
+  left: 0;
+  //padding: 1px;
+  word-wrap: break-word !important;
+  padding-right: 0;
+  margin-bottom: 0px;
+}
+
+.mensaje .cuerpo .tiempo {
+  position: absolute;
+  display: inline;
+  color: white;
+  right: 0.5rem;
+  float: right;
+  bottom: 0;
+  margin-top: 0px;
+  opacity: 0.8;
+}
+
+#left .tiempo {
+  text-align: right;
+}
+
+.mensaje .opcionesMsj {
+  position: absolute;
+  right: -35px;
+  top: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#left .opcionesMsj {
+  right: initial;
+  left: -75px;
+}
+
+.mensaje:hover .opcionesMsj {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mensaje .opcionesMsj button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #f1f1f1;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  color: #757575;
+}
+
+.mensaje .avatar,
+.usuarioSeleccionado .avatar,
+.usuario .avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  position: relative;
+  background-color: #e4e8f0;
+  border-radius: 50%;
+}

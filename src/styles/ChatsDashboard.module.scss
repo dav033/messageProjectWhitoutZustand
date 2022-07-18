@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+}
+
+.friendDrawer {
+  position: relative;
+  z-index: 9999;
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  background: $grayLight;
+  width: 100%;
+  transition: 0.3s ease;
+  border-top: 1px solid $gray;
+
+  &--grey {
+    background: #eee;
+  }
+
+  .text {
+    margin-left: 12px;
+    width: 70%;
+
+    h6 {
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .time {
+    color: red;
+  }
+
+  &:hover {
+    background: $blue;
+    cursor: pointer;
+
+    p,
+    h6,
+    .time {
+      color: #fff !important;
+    }
+  }
+}
